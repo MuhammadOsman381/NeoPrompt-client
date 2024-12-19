@@ -2,20 +2,209 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.element {
+    overflow: scroll; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.element::-webkit-scrollbar {
+    display: none;  
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+   .greeting-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6; /* Tailwind's bg-gray-100 equivalent */
+}
+
+/* Inner content container */
+.content-container {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151; /* Tailwind's text-gray-700 equivalent */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title styles */
+.title {
+    font-size: 2.5rem; /* Tailwind's text-4xl equivalent */
+    font-weight: 700;
+    margin-bottom: 0rem; /* Tailwind's mb-6 equivalent */
+}
+
+/* Subtitle styles */
+.subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 1rem; /* Tailwind's mb-4 equivalent */
+}
+
+/* Input container styles */
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Tailwind's gap-4 equivalent */
+    border: none; /* Tailwind's border-black equivalent */
+    padding-left: 15px;
+    padding-right: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 0.5rem; /* Tailwind's rounded-lg equivalent */
+    background-color: #fff; /* Tailwind's bg-white equivalent */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md equivalent */
+margin-top: 10px;
+}
+
+/* Input field styles */
+.input-field {
+    height: 40px; /* Tailwind's h-[40px] equivalent */
+    width: 300px; /* Tailwind's w-[300px] equivalent */
+    font-size:1rem; /* Tailwind's text-sm equivalent */
+    color: #374151; /* Tailwind's text-gray-700 equivalent */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    placeholder-color: #9ca3af; 
+}
+
+.input-field::placeholder {
+    font-size: 1rem; /* Tailwind's placeholder:text-xs equivalent */
+}
+
+/* Submit button styles */
+.submit-button {
+    padding: 0.5rem 1.5rem; /* Tailwind's px-6 py-2 equivalent */
+    background-color: #000; /* Tailwind's bg-black equivalent */
+    color: #fff; /* Tailwind's text-white equivalent */
+    font-size: 1rem; /* Tailwind's font-semibold equivalent */
+    font-weight: 600;
+    border-radius: 0.5rem; /* Tailwind's rounded-lg equivalent */
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #1f2937;
+}
+
+.collection-title{
+    text-align: start;
+    font-size: 1.8rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+.card {
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.02); 
+}
+
+
+
+/* Button Container */
+.card .flex {
+    justify-content: flex-end;
+    gap: 0rem;
+    margin-top: 1rem;
+}
+
+/* Edit Button */
+.edit-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #1d4ed8; /* Blue color */
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-btn:hover {
+    background-color: #2563eb;
+    color: white;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Delete Button */
+.delete-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 7px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #dc2626; /* Red color */
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+.delete-chat-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 7px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #dc2626; /* Red color */
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px;
+}
+
+
+
+.delete-btn:hover {
+    background-color: #b91c1c; /* Darker red on hover */
+    color: white;
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Icon Styling */
+.edit-btn i,
+.delete-btn i {
+    font-size: 1.2rem;
+}
+
+/* Optional: Button Active State */
+.edit-btn:active,
+.delete-btn:active {
+    transform: scale(0.95); /* Shrink effect when clicked */
+}
+
+
+.cancel-btn{
+    margin-left: 10px;
+}
+
+
+
+.delete-btn{
+    margin-left: 10px;
+}
+
+.chat-msg{
+    padding: 30px;
+}
+
+.modal{
+    margin: 100px;
 }
